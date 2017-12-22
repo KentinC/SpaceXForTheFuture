@@ -498,8 +498,8 @@ const imgChevronDatasEarth = displayDescriptionDatasEarth.querySelector('.chevro
 const descriptionDatasEarth = datasSectionEarth.querySelector('.description-earth')
 
 const actionsSectionEarth = containEarth.querySelector('.action-section')
-const prevPlanetEarth = actionsSectionEarth.querySelector('.prev')
-const nextPlanetEarth = actionsSectionEarth.querySelector('.next')
+// const prevPlanetEarth = actionsSectionEarth.querySelector('.prev')
+// const nextPlanetEarth = actionsSectionEarth.querySelector('.next')
 
 
 // TEXTS SECTIONS INTERACTIONS //
@@ -768,8 +768,8 @@ const imgChevronDatasMars = displayDescriptionDatasMars.querySelector('.chevron-
 const descriptionDatasMars = datasSectionMars.querySelector('.description-mars')
 
 const actionsSectionMars = containMars.querySelector('.action-section')
-const prevPlanetMars = actionsSectionMars.querySelector('.prev')
-const nextPlanetMars = actionsSectionMars.querySelector('.next')
+// const prevPlanetMars = actionsSectionMars.querySelector('.prev')
+// const nextPlanetMars = actionsSectionMars.querySelector('.next')
 
 
 // TEXTS SECTIONS INTERACTIONS //
