@@ -4,7 +4,9 @@ const $earthBtn = document.querySelector('.earthBtn')
 const $moonBtn = document.querySelector('.moonBtn')
 const $marsBtn = document.querySelector('.marsBtn')
 
+const $sound = document.querySelector('.sound')
 
+$sound.volume = 0.1
 //
 //GENERAL VARIABLES
 //
@@ -38,21 +40,18 @@ const $earthBackground = $solarSystem.querySelector('.earthPart')
 const $earthSection = $solarSystem.querySelector('.containEarth')
 const $earthSectionOn = $solarSystem.querySelector('.earthSectionOn')
 const $earthSectionOff = $solarSystem.querySelector('.earthSectionOff')
-const $bigEarth = $solarSystem.querySelector('.growEarth')
 
 //MOON VARIABLES
 const $moonBackground = $solarSystem.querySelector('.moonPart')
 const $moonSection = $solarSystem.querySelector('.containMoon')
 const $moonSectionOn = $solarSystem.querySelector('.moonSectionOn')
 const $moonSectionOff = $solarSystem.querySelector('.moonSectionOff')
-const $bigEarthMoon = $solarSystem.querySelector('.growEarthMoon')
 
 //MARS VARIABLES
 const $marsBackground = $solarSystem.querySelector('.marsPart')
 const $marsSection = $solarSystem.querySelector('.containMars')
 const $marsSectionOn = $solarSystem.querySelector('.marsSectionOn')
 const $marsSectionOff = $solarSystem.querySelector('.marsSectionOff')
-const $bigEarthMars = $solarSystem.querySelector('.growEarth')
 
 //ROCKETS VARIABLES
 const $earthRocket = $solarSystem.querySelector('.earthRocket')
