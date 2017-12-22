@@ -26,7 +26,12 @@ body {
     font-family: 'roboto_regular';
     src: url('../fonts/roboto_regular.ttf');
 }
-}
+
+
+
+
+
+
 /**H1 PROPERTIES**/
 
 h1 {
@@ -367,46 +372,6 @@ EARTHSECTION CSS PART
 }
 
 
-/**EARTHSECTION PROPERTIES**/
-
-.earthSection {
-    overflow: hidden;
-    background-color: #22313F;
-    height: 350px;
-    width: 350px;
-    top: 50%;
-    margin-top: -175px;
-    left: 50%;
-    margin-left: -175px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px #00C7FF;
-    filter: blur(0.75px);
-    position: absolute;
-    z-index: 20;
-}
-
-
-/**GROWEARTH MAP PROPERTIES**/
-
-.growEarth {
-    background: url('../images/earth_map.svg') repeat-x;
-    width: 258%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: 10;
-    animation: slide 20s linear infinite;
-    will-change: transform;
-}
-
-
-/**
-MOONSECTION CSS PART
-**/
-
-
-/**MOONSECTIONON PROPERTY*/
 
 .moonSectionOn {
     transition: opacity 1s ease-in-out 1s;
@@ -420,73 +385,6 @@ MOONSECTION CSS PART
 }
 
 
-/**MOONSECTION PROPERTIES**/
-
-.moonSection {
-    overflow: hidden;
-    height: 130px;
-    width: 130px;
-    top: 50%;
-    margin-top: -200px;
-    left: 50%;
-    margin-left: 160px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px whitesmoke;
-    filter: blur(0.75px);
-    position: absolute;
-    z-index: 8;
-}
-
-
-/**GROWMOON MAP PROPERTIES**/
-
-.growMoon {
-    background: url('../images/moon_map.svg') repeat-x;
-    width: 258%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: 9;
-    animation: slide 20s linear infinite;
-    will-change: transform;
-}
-
-.growEarthMoon {
-    background: url('../images/earth_map.svg') repeat-x;
-    width: 258%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: 9;
-    animation: slide 20s linear infinite;
-    will-change: transform;
-}
-
-.earthSectionMoon {
-    overflow: hidden;
-    height: 250px;
-    width: 250px;
-    top: 50%;
-    margin-top: -175px;
-    left: 50%;
-    margin-left: -340px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px #00C7FF;
-    filter: blur(0.75px);
-    position: absolute;
-    z-index: 8;
-}
-
-
-/**
-MARSSECTION CSS PART
-**/
-
-
-/**MARSSECTIONON PROPERTY*/
-
 .marsSectionOn {
     transition: opacity 1s ease-in-out 1s;
 }
@@ -499,114 +397,76 @@ MARSSECTION CSS PART
 }
 
 
-/**MARSSECTION PROPERTIES**/
-
-.marsSection {
-    overflow: hidden;
-    height: 150px;
-    width: 150px;
-    top: 50%;
-    margin-top: -200px;
-    left: 50%;
-    margin-left: 130px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px coral;
-    filter: blur(0.75px);
-    position: absolute;
-    z-index: 8;
-}
-
-
-/**GROWMARS MAP PROPERTIES**/
-
-.growMars {
-    background: url('../images/mars_map.svg') repeat-x;
-    width: 258%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: 9;
-    animation: slide 20s linear infinite;
-    will-change: transform;
-}
-
-.earthSectionMars {
-    overflow: hidden;
-    height: 250px;
-    width: 250px;
-    top: 50%;
-    margin-top: -175px;
-    left: 50%;
-    margin-left: -340px;
-    border-radius: 50%;
-    box-shadow: 0 0 50px #00C7FF;
-    filter: blur(0.75px);
-    position: absolute;
-    z-index: 8;
-}
-
 
 /**ALLOW THE MAPS TO SLIDE**/
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
+
 
 .earthRocketLaunched {
-    width: 10px;
-    height: 10px;
+       width: 1vh;
+    height: 1vh;
     top: 50%;
-    margin-top: -156px;
     left: 50%;
-    margin-left: 53px;
+    transform-origin: 180px;
+  transform: translate(-50%,-50%);
     position: absolute;
     z-index: 12;
-    transform-origin: 180px;
     animation: earthRocketMove 15s linear infinite;
     will-change: transform;
 }
 
 @keyframes earthRocketMove {
     0% {
+      opacity: 0;
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+  5% {
+    opacity: 0;
+        -webkit-transform: rotate(22.5deg);
+        transform: rotate(22.5deg);
+    }
+  15% {
+    opacity: 1;
+        -webkit-transform: rotate(67.5deg);
+        transform: rotate(67.5deg);
+    }
     20% {
+      opacity: 1;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
     }
     40% {
+       opacity: 1;
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
     }
     60% {
+       opacity: 1;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
     }
     80% {
+       opacity: 0;
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
-    }
+  }
     100% {
+       opacity: 0;
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
 
 .moonRocketLaunched {
-    width: 10px;
-    height: 10px;
+    width: 1vh;
+    height: 1vh;
     top: 50%;
     left: 50%;
-    position: absolute;
+    transform: translate(-50%,-50%);
+    transform-origin: 30vh;
+  position: absolute;
     z-index: 12;
-    transform-origin: 140px;
     animation: moonRocketMove 20s linear infinite;
     will-change: transform;
 }
@@ -614,57 +474,69 @@ MARSSECTION CSS PART
 @keyframes moonRocketMove {
     0% {
         opacity: 0;
-        transform: translate(-300px, -20px) rotate(75deg);
+        transform: translate(-300vh, -10vh) rotate(90deg);
     }
-    20% {
+    30% {
         opacity: 1;
-        transform: translate(90px, -140px) rotate(65deg);
+        transform: translate(-30vh, 0vh) rotate(90deg);
     }
     50% {
         opacity: 1;
-        transform: translate(90px, -140px) rotate(360deg);
+        transform: translate(-30vh, 0vh) rotate(360deg);
     }
-    75% {
+    70% {
         opacity: 1;
-        transform: translate(90px, -140px) rotate(640deg);
+        transform: translate(-30vh, 0vh) rotate(670deg);
     }
+  
+  
     100% {
         opacity: 0;
-        transform: translate(-380px, -240px) rotate(640deg);
+        transform: translate(-300vh, -180vh) rotate(670deg);
     }
 }
 
 .marsRocketLaunched {
-    width: 10px;
-    height: 10px;
+    width: 1vh;
+    height: 1vh;
     top: 50%;
-    margin-top: -156px;
     left: 50%;
-    margin-left: 53px;
+   transform: translate(-50%,-50%);
     position: absolute;
     z-index: 12;
     animation: marsRocketMove 20s linear infinite;
     will-change: transform;
+   
 }
 
 @keyframes marsRocketMove {
     0% {
-        transform: translate(-250px, 100px) rotate(80deg);
+      opacity: 1;
+        transform: translate(-200vh, 70vh) rotate(70deg);
     }
-    45% {
-        transform: translate(170px, 30px) rotate(80deg);
+    22% {
+      opacity: 1;
+        transform: translate(-5vh, 4vh) rotate(70deg);
     }
-    50% {
-        transform: translate(120px, 30px) rotate(260deg);
+    25% {
+      opacity: 0;
+        transform: translate(2vh, 0vh) rotate(70deg);
     }
-    55% {
-        transform: translate(120px, 30px) rotate(260deg);
+    40% {
+      opacity: 0;
+        transform: translate(12vh,0vh) rotate(250deg);
+    }
+  55% {
+      opacity: 1;
+        transform: translate(-20vh, 10vh) rotate(250deg);
     }
     90% {
-        transform: translate(-250px, 100px) rotate(260deg);
+      opacity: 1;
+        transform: translate(-200vh, 70vh) rotate(250deg);
     }
     100% {
-        transform: translate(-250px, 100px) rotate(80deg);
+      opacity: 1;
+        transform: translate(-200vh, 70vh) rotate(70deg);
     }
 }
 
@@ -678,6 +550,11 @@ MARSSECTION CSS PART
 .rocketOff {
     transition: opacity 1s ease-in-out;
 }
+
+
+
+
+
 
 .logo .spaceX {
     position: absolute;
@@ -738,7 +615,7 @@ MARSSECTION CSS PART
 .containEarth .infos-section .title {
     font-family: 'space_light', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2vh;
 }
 
 .containEarth .infos-section .description-earth {
@@ -748,6 +625,11 @@ MARSSECTION CSS PART
     width: 27vh;
 }
 
+.description {
+  font-family: 'robot_regular';
+    font-size: 1.3vh;
+    line-height: 1.7vh;
+}
 
 /**********************\
 
@@ -991,7 +873,7 @@ MARSSECTION CSS PART
 .containMoon .infos-section .title {
     font-family: 'space_light', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2vh;
 }
 
 .containMoon .infos-section .description-moon {
@@ -1215,7 +1097,7 @@ MARSSECTION CSS PART
     font-family: 'space_light',
     sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2vh;
 }
 .containMars .infos-section .description-mars {
     font-family: 'roboto_regular',
